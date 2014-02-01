@@ -6,7 +6,8 @@ angular.module('myApp', [
   'myApp.controllers',
   'myApp.filters',
   'myApp.services',
-  'myApp.directives'
+  'myApp.directives',
+  'ui.bootstrap'
 ]).
 config(function ($routeProvider, $locationProvider) {
   $routeProvider.
@@ -14,6 +15,10 @@ config(function ($routeProvider, $locationProvider) {
       templateUrl: 'partials/partial1',
       controller: 'MyCtrl1'
     }).
+ when('/', {
+     templateUrl: 'partials/partial1',
+     controller: 'MyCtrl1'
+ }).
     when('/view2', {
       templateUrl: 'partials/partial2',
       controller: 'MyCtrl2'
